@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Short Video Tracker",
+  "version": "1.0.0",
+  "description": "YouTube Shortsの視聴を自動記録します。",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/shorts/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
